@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Mode, useLightSwitch, modeSelector, useModeSelector } from '../'
+import { Mode, useLightSwitch, useModeSelector } from '../'
 
 
 const Simple: React.FC = () => {
