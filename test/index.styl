@@ -1,0 +1,38 @@
+$white = #ffffff
+$light = #dddddd
+$dark = #444444
+$black = #000000
+
+table
+    text-align: center
+
+    .up
+        background: $light
+        color: $black
+        
+        @media (prefers-color-scheme: dark)
+            .dark
+                background:  $dark
+                color: $white
+        @media (prefers-color-scheme: light)
+            .light
+                background: $white
+                color:  $black
+    
+    .down
+        background: $dark
+        color: $white
+        
+        @media (prefers-color-scheme: dark)
+            .dark
+                background: $black
+                color: $white
+        @media (prefers-color-scheme: light)
+            .light
+                background: $light
+                color: $black
+
+    td,th
+        padding: 1em 2em
+        border: 1px solid blue
+
