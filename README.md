@@ -10,7 +10,7 @@
 
 - Typescript compatible
 - **0** Dependencies
-- Tiny **~0.7kB**
+- Tiny **~0.4kB**
 - React Hooks
 
 ###### Installation
