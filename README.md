@@ -21,7 +21,7 @@ npm i use-light-switch
 
 ## 🤔 Motivation
 
-There was no library with typings 🤕
+There was no library that included typings 🤕
 
 ## 🚀 Quickstart
 
@@ -38,7 +38,7 @@ const App: React.FC = () => {
     })
 
     return <div>
-        <h3>Selector</h3>
+        <p>Try switching your dark mode in macOS or Windows</p>
         <div style={{
             padding: '1em 2em',
             backgroundColor: selected.color
