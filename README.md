@@ -19,6 +19,8 @@
 npm i use-light-switch
 ```
 
+## 💻 [Live Example](https://codesandbox.io/s/simple-wbpgp)
+
 ## 🤔 Motivation
 
 There was no library that included typings 🤕
