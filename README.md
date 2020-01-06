@@ -26,29 +26,27 @@ There was no library with typings 🤕
 ## 🚀 Quickstart
 
 ```typescript
+import React from 'react'
 import ReactDOM from 'react-dom'
-import { useForm } from 'formhero'
+import { useModeSelector } from 'use-light-switch'
 
-const Form = () => {
-  const { field, form } = useForm({
-    username: '',
-    password: '',
-  })
+const App: React.FC = () => {
+    const selected = useModeSelector({
+        light: { color: 'green', name: 'Light' },
+        dark: { color: 'red', name: 'Dark' },
+        unset: { color: 'blue', name: 'Unset' },
+    })
 
-  const _submit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log(form)
-  }
-
-  return (
-    <div>
-      <form onSubmit={_submit}>
-        <input {...field('username')} />
-        <input {...field('password')} />
-
-        <button type="submit">Go 🚀</button>
-      </form>
+    return <div>
+        <h3>Selector</h3>
+        <div style={{
+            padding: '1em 2em',
+            backgroundColor: selected.color
+        }}>
+            {selected.name}
+        </div>
     </div>
-  )
 }
+
+ReactDOM.render(<App />, window.document.getElementById('root'))
 ```
