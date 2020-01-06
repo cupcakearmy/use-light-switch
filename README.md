@@ -50,3 +50,88 @@ const App: React.FC = () => {
 
 ReactDOM.render(<App />, window.document.getElementById('root'))
 ```
+
+## 📒 Reference
+
+### `useLightSwitch()`
+
+This is the most basic react hook. It returns one of 3 [Modes](#mode)
+
+###### Example
+
+```typescript
+import { Mode, useLightSwitch } from 'use-light-switch'
+
+
+const Simple: React.FC = () => {
+    const mode = useLightSwitch()
+
+    if (mode === Mode.Dark) ...
+
+    return ...
+}
+```
+
+
+### Mode
+
+A simple enum. Possible values are:
+
+- `Mode.Light`
+- `Mode.Dark`
+- `Mode.Unset`
+
+`Unset` is returned when the user has no explicit preference. This is often the case with older or if it's simply unsupported.
+
+### `useModeSelector(options)`
+
+This is a handy hook that reduces boilerplate. You pass values for the different modes and the hook will choose accordingly to what is currently selected. uses [`modeSelector`](#modeSelector) under the hood.
+
+###### Example
+
+```typescript
+import { useModeSelector } from 'use-light-switch'
+
+const WithSelector: React.FC = () => {
+
+    const selected = useModeSelector({
+        light: { color: 'green', name: 'Light' },
+        dark: { color: 'red', name: 'Dark' },
+        unset: { color: 'blue', name: 'Unset' },
+    })
+
+    return <div>
+        <h3>Selector</h3>
+        <div style={{
+            padding: '1em 2em',
+            backgroundColor: selected.color
+        }}>
+            {selected.name}
+        </div>
+    </div>
+}
+```
+
+All parameters are optional and typesafe.
+
+### `modeSelector(mode, options)`
+
+This is a simple functions that returns the matched option to the mode.
+
+###### Example
+
+```typescript
+import { Mode, modeSelector } from 'use-light-switch'
+
+const selected = modeSelector(
+    Mode.Dark,
+    {
+        light: { color: 'green', name: 'Light' },
+        dark: { color: 'red', name: 'Dark' },
+        unset: { color: 'blue', name: 'Unset' },
+    }
+)
+
+selected.color  // red
+selected.name  // Dark
+```
