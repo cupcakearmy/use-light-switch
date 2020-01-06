@@ -1,0 +1,25 @@
+{
+	"name": "use-light-switch",
+	"version": "0.0.2",
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"scripts": {
+		"prepublishOnly": "rm -rf ./dist && tsc",
+		"build": "tsc",
+		"watch": "tsc -w"
+	},
+	"browserslist": [
+		"last 2 Chrome versions",
+		"last 2 Firefox versions",
+		"last 2 Safari versions"
+	],
+	"peerDependencies": {
+		"react": "^16.8"
+	},
+	"devDependencies": {
+		"@types/react": "^16.8",
+		"react": "^16.8",
+		"react-dom": "^16.8",
+		"typescript": "^3.7"
+	}
+}
