@@ -25,6 +25,15 @@ npm i use-light-switch
 
 There was no library that included typings 🤕
 
+## 🛠 Compatibility & How it works
+
+We leverage two browser features.
+
+1. [prefers-color-scheme](https://caniuse.com/#feat=prefers-color-scheme) media query.
+2. [matchMedia](https://caniuse.com/#feat=matchmedia)
+
+The first one is a css media query that gives us the actual user preference. with `window.matchMedia` we can get it inside of javascript and even listen on changes, which makes it reactive.
+
 ## 🚀 Quickstart
 
 ```typescript
