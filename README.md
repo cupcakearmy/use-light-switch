@@ -85,7 +85,7 @@ A simple enum. Possible values are:
 
 ### `useModeSelector(options)`
 
-This is a handy hook that reduces boilerplate. You pass values for the different modes and the hook will choose accordingly to what is currently selected. uses [`modeSelector`](#modeSelector) under the hood.
+This is a handy hook that reduces boilerplate. You pass values for the different modes and the hook will choose accordingly to what is currently selected. uses [`modeSelector`](#modeselectormode-options) under the hood.
 
 ###### Example
 
