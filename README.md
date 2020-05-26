@@ -34,7 +34,7 @@ We leverage two browser features.
 
 The first one is a css media query that gives us the actual user preference. with `window.matchMedia` we can get it inside of javascript and even listen on changes, which makes it reactive.
 
-Currently (06.01.2020) Safari, iOS, Firefox, Chrome & Android all support these features. Edge will as soon as it converts to chromium (15.01.2020) and IE of course is a lost cause.
+Currently (26.05.2020) Safari, iOS, Firefox, Chrome, Edge & Android all support these features. IE of course is a lost cause.
 
 ## 🚀 Quickstart
 
