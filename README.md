@@ -1,8 +1,10 @@
 # use-light-switch
 
-![Version](https://badgen.net/npm/v/use-light-switch)
-![Types](https://badgen.net/npm/types/use-light-switch)
-![Size Badge](https://badgen.net/bundlephobia/minzip/use-light-switch)
+![dependencies](https://badgen.net/david/dep/cupcakearmy/use-light-switch)
+![downloads badge](https://badgen.net/npm/dt/use-light-switch)
+![types badge](https://badgen.net/npm/types/use-light-switch)
+![version badge](https://badgen.net/npm/v/use-light-switch)
+![minzip size badge](https://badgen.net/bundlephobia/minzip/use-light-switch)
 
 **React hook for dark mode.**
 
